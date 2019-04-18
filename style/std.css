@@ -1,0 +1,115 @@
+@font-face {
+  font-family: thicc;
+  src: url(HelveticaNeueLTBlkEx.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 24px;
+  font-family: thicc;
+  text-transform: uppercase;
+}
+
+body {
+  background: #FFE2F2;
+  border: 20px solid blue;
+  padding: 1em;
+  color: blue;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header div {
+  font-size: .75em;
+}
+
+section#date {
+  margin-top: 2em;
+}
+
+h1 {
+  font-size: 10em;
+  text-align: center;
+}
+
+#distortion-text {
+  top: -1.5em;
+  z-index: -1;
+}
+
+.gradient-stroke-text {
+  padding-right: 4px;
+  background: -webkit-linear-gradient(0deg, blue 0%, #FF8CE3 50%, #FC1524 100%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  color: #FFE2F2;
+}
+
+h2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 110px;
+  text-align: center;
+  font-size: 1.2em;
+  letter-spacing: .6em;
+  /* transform: scale(1, -1); */
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  text-transform: none;
+  margin-bottom: 1em;
+  width: 70%;
+}
+
+form#rsvp {
+  display: flex;
+  flex-direction: column;
+  max-width: 20em;
+}
+
+input, textarea {
+  font-size: .75em;
+  padding: .5em;
+  padding-bottom: .25em;
+  background: none;
+  border: 2px solid blue;
+  border-radius: 4px;
+  margin-bottom: .5em;
+  color: blue;
+}
+
+textarea {
+  resize: none;
+  height: 5.8em;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: .5em;
+  cursor: pointer;
+  color: red;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.right {
+  text-align: right;
+}

@@ -1,10 +1,44 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Sibby + Juju</title>
+  <title>Sibby + Juju</title>
+  <link rel="stylesheet" type="text/css" href="style/std.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="Description" content="For our friends and family~">
+  <meta property="og:title" content="Sibby + Juju">
+  <meta property="og:url" content="https://sibbyandjuju.com">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="For our friends and family~">
+  <!-- <meta property="og:image" content=""> -->
 </head>
+
 <body>
+  <header>
+    <div>Sabrina + Julius</div>
+    <div class="right gradient-stroke-text">March 21st, 2020<br>Dallas, Texas</div>
+  </header>
 
-<center><h1><span style="color:blue">Sibby + Juju, 3.21.2020</span></h1></center>
+  <section id="date">
+    <span class="relative">
+      <h2 class="gradient-stroke-text">Save the Date</h2>
+      <span id="distortion-text" class="absolute"></span>
+      <h1 id="distortion-text-placeholder">3.21</h1>
+    </span>
+  </section>
+  <section>
+    <form id="rsvp">
+      <h3>Let us send you some fancy paper later this year!</h3>
+      <input id="name" placeholder="Your name">
+      <textarea id="address" placeholder="Your mailing address"></textarea>
+      <button>Click here to submit</button>
+    </form>
+  </section>
 
+  <script src="js/lib/three.min.js"></script>
+  <script src="js/lib/underscore-min.js"></script>
+  <script src="js/lib/blotter.min.js"></script>
+  <script src="js/lib/rollingDistortMaterial.js"></script>
+  <script src="js/std.js"></script>
 </body>
 </html>
