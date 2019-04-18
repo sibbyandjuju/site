@@ -62,7 +62,6 @@ h2 {
   text-align: center;
   font-size: 1.2em;
   letter-spacing: .6em;
-  /* transform: scale(1, -1); */
 }
 
 section {
@@ -70,16 +69,17 @@ section {
   justify-content: center;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 20em;
+  position: relative;
+}
+
 h3 {
   text-transform: none;
   margin-bottom: 1em;
   width: 70%;
-}
-
-form#rsvp {
-  display: flex;
-  flex-direction: column;
-  max-width: 20em;
 }
 
 input, textarea {
@@ -93,9 +93,59 @@ input, textarea {
   color: blue;
 }
 
+button {
+  transition: all .25s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(.95);
+}
+
+/* Form submission */
+
+input:disabled,
+textarea:disabled,
+button:disabled {
+  opacity: .5;
+}
+
+#confirmation, #prompt, input, textarea, button {
+  transition: all .5s ease-in-out;
+}
+
+#form.success #prompt,
+#form.success input,
+#form.success textarea,
+#form.success button {
+  opacity: 0;
+  transform: translateY(100px);
+  pointer-events: none;
+}
+
+#confirmation {
+  opacity: 0;
+  transform: translateY(-100px);
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#form.success #confirmation {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
 textarea {
   resize: none;
-  height: 5.8em;
+  height: 4.75em;
 }
 
 button {
@@ -112,7 +162,6 @@ button {
   right: 0;
   bottom: 0;
   left: 0;
-  border: 20px solid blue;
   pointer-events: none;
   z-index: -1;
   background: linear-gradient(#FFE2F2 0%, rgba(0,0,0,0) 100% )

@@ -21,15 +21,30 @@
       <h2 class="gradient-stroke-text">Save the Date</h2>
     </span>
   </section>
-  <section>
-    <form id="rsvp">
-      <h3>Let us send you some fancy paper later this year!</h3>
-      <input id="name" placeholder="Your name">
-      <textarea id="address" placeholder="Your mailing address"></textarea>
-      <button>Click here to submit</button>
+  <section id="form">
+    <form name="submit-address">
+      <h3>
+        <span id="prompt">
+          Let us send you some fancy paper later this year!
+        </span>
+        <span id="confirmation">
+          Your information has been submitted — thank you!
+        </span>
+      </h3>
+      <input
+        name="name"
+        type="text"
+        placeholder="Your name"
+        required>
+      <textarea
+        name="address"
+        placeholder="Your mailing address"
+        required></textarea>
+      <button
+        name="submit"
+        type="submit">Click here to submit</button>
     </form>
   </section>
-  <footer></footer>
 
   <div class="gradient"></div>
   <script src="js/lib/three.min.js" defer></script>
