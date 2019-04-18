@@ -14,8 +14,7 @@
 
 body {
   background: #FFE2F2;
-  border: 20px solid blue;
-  padding: 1em;
+  padding: 2em;
   color: blue;
 }
 
@@ -82,7 +81,7 @@ input, textarea {
   font-size: .75em;
   padding: .5em;
   padding-bottom: .25em;
-  background: none;
+  background: #FFE2F2;
   border: 2px solid blue;
   border-radius: 4px;
   margin-bottom: .5em;
@@ -101,6 +100,42 @@ button {
   cursor: pointer;
   color: red;
 }
+
+.border {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 20px solid blue;
+  pointer-events: none;
+  z-index: -2;
+  background: linear-gradient(#FFE2F2 0%, rgba(0,0,0,0) 100% )
+}
+
+.wallpaper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  background-image: url('tile.png');
+  background-position: 0 0;
+  background-size: 200px 200px;
+  animation: scrollWallpaper 10s linear infinite;
+}
+
+@keyframes scrollWallpaper {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -400px 400px;
+  }
+}
+
+/* Modular */
 
 .relative {
   position: relative;
