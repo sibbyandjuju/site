@@ -14,8 +14,14 @@
 
 body {
   background: #FFE2F2;
-  padding: 2em;
+  padding: 1em;
+  border: 20px solid blue;
   color: blue;
+  min-height: 100vh;
+  background-image: url('tile.png');
+  background-position: 0 0;
+  background-size: 200px 200px;
+  animation: scrollWallpaper 10s linear infinite;
 }
 
 header {
@@ -38,7 +44,6 @@ h1 {
 
 #distortion-text {
   top: -1.5em;
-  z-index: -1;
 }
 
 .gradient-stroke-text {
@@ -101,7 +106,7 @@ button {
   color: red;
 }
 
-.border {
+.gradient {
   position: absolute;
   top: 0;
   right: 0;
@@ -109,21 +114,8 @@ button {
   left: 0;
   border: 20px solid blue;
   pointer-events: none;
-  z-index: -2;
+  z-index: -1;
   background: linear-gradient(#FFE2F2 0%, rgba(0,0,0,0) 100% )
-}
-
-.wallpaper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -2;
-  background-image: url('tile.png');
-  background-position: 0 0;
-  background-size: 200px 200px;
-  animation: scrollWallpaper 10s linear infinite;
 }
 
 @keyframes scrollWallpaper {
