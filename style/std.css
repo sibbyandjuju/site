@@ -22,6 +22,7 @@ body {
   background-position: 0 0;
   background-size: 200px 200px;
   animation: scrollWallpaper 10s linear infinite;
+  overflow-x: hidden;
 }
 
 header {
@@ -44,6 +45,7 @@ h1 {
 
 #distortion-text {
   top: -1.5em;
+  left: .75em;
 }
 
 .gradient-stroke-text {
@@ -80,6 +82,7 @@ h3 {
   text-transform: none;
   margin-bottom: 1em;
   width: 70%;
+  min-width: 10em;
 }
 
 input, textarea {
@@ -90,19 +93,22 @@ input, textarea {
   border: 2px solid blue;
   border-radius: 4px;
   margin-bottom: .5em;
+  width: 100%;
   color: blue;
 }
 
-button {
-  transition: all .25s ease-in-out;
+input:required, textarea:required {
+  box-shadow: none;
 }
 
-button:hover {
-  transform: scale(1.1);
+input:focus, textarea:focus {
+  box-shadow: 0 0 0 2px blue;
+  outline: none;
 }
 
-button:active {
-  transform: scale(.95);
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
 }
 
 /* Form submission */
@@ -114,7 +120,7 @@ button:disabled {
 }
 
 #confirmation, #prompt, input, textarea, button {
-  transition: all .5s ease-in-out;
+  transition: transform .5s ease-out, opacity .5s linear;
 }
 
 #form.success #prompt,
@@ -124,6 +130,10 @@ button:disabled {
   opacity: 0;
   transform: translateY(100px);
   pointer-events: none;
+}
+
+#prompt, #confirmation {
+  display: inline-block;
 }
 
 #confirmation {
@@ -152,8 +162,19 @@ button {
   border: none;
   background: none;
   padding: .5em;
+  padding-top: .75em;
   cursor: pointer;
   color: red;
+  transition: transform .25s ease-in-out;
+}
+
+button:hover, button:focus {
+  transform: scale(1.1);
+  outline: none;
+}
+
+button:active {
+  transform: scale(.95);
 }
 
 .gradient {
@@ -164,7 +185,7 @@ button {
   left: 0;
   pointer-events: none;
   z-index: -1;
-  background: linear-gradient(#FFE2F2 0%, rgba(0,0,0,0) 100% )
+  background: linear-gradient(#FFE2F2 0%, rgba(255,226,242,0) 100%);
 }
 
 @keyframes scrollWallpaper {
@@ -175,6 +196,40 @@ button {
     background-position: -400px 400px;
   }
 }
+
+/* Mobile */
+.mobile {
+  display: none;
+}
+
+@media(max-width: 640px) {
+  span.mobile {
+    display: inline;
+  }
+
+  div.mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  #date {
+    transform: scale(.75);
+  }
+}
+
+@media(max-width: 520px) {
+  #date {
+    transform: rotateZ(45deg) scale(.75) translateY(15%);
+  }
+}
+
 
 /* Modular */
 

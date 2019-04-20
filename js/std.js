@@ -65,4 +65,4 @@ let distortText = () => {
 }
 
 setUpForm();
-distortText();
+document.fonts.ready.then(distortText);
