@@ -12,6 +12,10 @@
   text-transform: uppercase;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: #FFE2F2;
   padding: 1em;
@@ -22,7 +26,6 @@ body {
   background-position: 0 0;
   background-size: 200px 200px;
   animation: scrollWallpaper 10s linear infinite;
-  overflow-x: hidden;
 }
 
 header {
