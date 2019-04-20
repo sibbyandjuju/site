@@ -13,7 +13,7 @@
   text-transform: uppercase;
 }
 
-html {
+html, body {
   overflow-x: hidden;
 }
 
@@ -56,7 +56,7 @@ h1 {
 
 #distortion-text {
   top: -1.5em;
-  left: .75em;
+  left: .5em;
 }
 
 .gradient-stroke-text {
@@ -211,10 +211,6 @@ button:active {
 
 /* Mobile */
 @media(max-width: 640px) {
-  .desktop {
-    display: none;
-  }
-
   header {
     flex-direction: column;
   }
@@ -234,25 +230,27 @@ button:active {
 
   #date {
     margin-top: -4em;
-    transform: scale(.75);
+    transform: scale(.75) translateY(33%);
   }
 }
 
 @media(max-width: 520px) {
+  .desktop {
+    display: none;
+  }
+
   #date {
     transform: rotateZ(45deg) scale(.75) translateY(15%);
   }
 }
 
 /* Desktop only */
-@media(min-width: 640px) {
+@media(min-width: 520px) {
   .mobile {
     display: none;
   }
-
   #deets {
     display: flex;
-    line-height: 1em;
   }
 }
 
