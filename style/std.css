@@ -248,8 +248,11 @@ footer {
 footer div {
   display: inline-block;
   animation: marquee 20s linear infinite;
-  font-family: pixel;
   padding: 0 1em;
+}
+
+footer div, footer a {
+  font-family: pixel;
 }
 
 .gradient {
