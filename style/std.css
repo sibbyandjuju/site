@@ -146,7 +146,8 @@ button:disabled {
   opacity: .5;
 }
 
-#confirmation, #prompt, input, textarea, button {
+#form.success #confirmation,
+#prompt, input, textarea, button {
   transition: transform .5s ease-out, opacity .5s linear;
 }
 
