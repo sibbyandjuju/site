@@ -2,6 +2,10 @@ let setUpForm = () => {
   const scriptURL = "https://script.google.com/macros/s/AKfycbxHnE5_f8mMpXqo64c_IhbV9eKL1_Xbj42Rw84ZTJnUedbDyzoK/exec";
   const form = document.forms['submit-address'];
 
+  form.elements.name.addEventListener('focus', e => {
+    e.scrollIntoView();
+  });
+
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);

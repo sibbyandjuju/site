@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
   background-image: url('tile.png');
   background-position: 0 0;
-  background-size: 200px 200px;
+  background-size: 160px 160px;
   animation: scrollWallpaper 10s linear infinite;
 }
 
@@ -205,7 +205,7 @@ button:active {
     background-position: 0 0;
   }
   100% {
-    background-position: -400px 400px;
+    background-position: -320px 320px;
   }
 }
 
@@ -231,6 +231,7 @@ button:active {
   #date {
     margin-top: -4em;
     transform: scale(.75) translateY(33%);
+    margin-bottom: 1em;
   }
 }
 
