@@ -26,7 +26,7 @@ html, body {
 body {
   background: #FFE2F2;
   padding: 1em;
-  border: 20px solid blue;
+  border: 16px solid blue;
   color: blue;
   min-height: 100vh;
   background-image: url('tilep.png');
@@ -41,8 +41,16 @@ header {
   align-items: baseline;
 }
 
+header br {
+  line-height: 1em;
+}
+
 h4 {
   font-size: .75em;
+}
+
+#us br {
+  margin-bottom: -.5em;
 }
 
 img#texas {
@@ -327,6 +335,10 @@ footer div, footer a {
     display: none;
   }
 
+  header h4#us, header #us br {
+    line-height: 20px;
+  }
+
   #texas {
     margin-top: .5em;
   }
@@ -334,7 +346,7 @@ footer div, footer a {
   #date {
     transform: rotateZ(45deg) scale(.75) translateY(15%);
   }
-  
+
   form {
     width: 100%;
   }
