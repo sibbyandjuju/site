@@ -15,8 +15,9 @@ let setUpForm = () => {
     for (let i = 0; i < inputs.length; i++) {
       inputs[i].disabled = true;
     }
-    const oldSubmitText = inputs.submit.innerText;
-    inputs.submit.innerText = "Submitting..."
+    const submitLabel = document.getElementById('submit-label');
+    const oldSubmitText = submitLabel.innerText;
+    submitLabel.innerText = "Sending"
 
     // Send data
     fetch(scriptURL, {
@@ -36,7 +37,7 @@ let setUpForm = () => {
         for (let i = 0; i < inputs.length; i++) {
           inputs[i].disabled = false;
         }   
-        inputs.submit.innerText = oldSubmitText;
+        submitLabel.innerText = oldSubmitText;
       });
   })
 }

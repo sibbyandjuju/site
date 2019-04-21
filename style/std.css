@@ -3,6 +3,11 @@
   src: url(HelveticaNeueLTBlkEx.ttf);
 }
 
+@font-face {
+  font-family: pixel;
+  src: url(MatchupPro.woff);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +20,7 @@
 
 html, body {
   overflow-x: hidden;
+  overflow-y: visible;
 }
 
 body {
@@ -23,7 +29,7 @@ body {
   border: 20px solid blue;
   color: blue;
   min-height: 100vh;
-  background-image: url('tile.png');
+  background-image: url('tilep.png');
   background-position: 0 0;
   background-size: 160px 160px;
   animation: scrollWallpaper 10s linear infinite;
@@ -40,8 +46,8 @@ h4 {
 }
 
 img#texas {
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   margin-left: .5em;
 }
 
@@ -93,6 +99,10 @@ form {
 h3 {
   text-transform: none;
   margin-bottom: 1em;
+  position: relative;
+}
+
+#prompt {
   width: 70%;
   min-width: 8em;
 }
@@ -157,6 +167,21 @@ button:disabled {
   left: 0;
   right: 0;
   bottom: 0;
+  text-align: center;
+  padding: 0 15%;
+}
+
+#confirmation span {
+  display: inline-block;
+  font-family: pixel;
+  line-height: .75em;
+  margin-top: .5em;
+}
+
+#confirmation img {
+  margin-top: 1em;
+  width: 100px;
+  height: 40px;
 }
 
 #form.success #confirmation {
@@ -173,20 +198,58 @@ textarea {
 button {
   border: none;
   background: none;
+  margin-top: .25em;
   padding: .5em;
-  padding-top: .75em;
   cursor: pointer;
   color: red;
   transition: transform .25s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button div {
+  margin: 0 .75em;
+  margin-bottom: -.25em;
 }
 
 button:hover, button:focus {
-  transform: scale(1.1);
+  transform: scale(1.05);
   outline: none;
 }
 
 button:active {
   transform: scale(.95);
+}
+
+.face {
+  width: 32px;
+  height: 32px;
+  animation-fill-mode: both;
+}
+
+button:hover .face:first-child {
+  animation: sway 2s linear infinite;
+}
+
+button:hover .face:last-child {
+  animation: sway 2s linear infinite reverse;
+}
+
+footer {
+  background: #FFE600;
+  color: red;
+  margin: 6em -2em 1em;
+  font-size: .5em;
+  padding: .5em 0;
+  white-space: nowrap;
+}
+
+footer div {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+  font-family: pixel;
+  padding: 0 1em;
 }
 
 .gradient {
@@ -209,6 +272,27 @@ button:active {
   }
 }
 
+@keyframes sway {
+  0% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(-15deg);
+  }
+  75% {
+    transform: rotateZ(15deg);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 /* Mobile */
 @media(max-width: 640px) {
   header {
@@ -224,14 +308,14 @@ button:active {
     line-height: 24px;
   }
 
-  #texas {
-    margin-top: .5em;
-  }
-
   #date {
     margin-top: -4em;
     transform: scale(.75) translateY(33%);
     margin-bottom: 1em;
+  }
+
+  #confirmation {
+    margin-top: 4em;
   }
 }
 
@@ -240,8 +324,16 @@ button:active {
     display: none;
   }
 
+  #texas {
+    margin-top: .5em;
+  }
+
   #date {
     transform: rotateZ(45deg) scale(.75) translateY(15%);
+  }
+  
+  form {
+    width: 100%;
   }
 }
 
@@ -252,6 +344,7 @@ button:active {
   }
   #deets {
     display: flex;
+    align-items: center;
   }
 }
 
