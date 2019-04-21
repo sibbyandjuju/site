@@ -71,6 +71,7 @@ h1 {
 
 .gradient-stroke-text {
   padding-right: 4px;
+  padding-left: 4px;
   background: -webkit-linear-gradient(0deg, blue 0%, #FF8CE3 50%, #FC1524 100%);
   -webkit-background-clip: text;
   -webkit-text-stroke: 4px transparent;
@@ -245,7 +246,7 @@ footer {
   color: red;
   margin: 6em -2em 1em;
   font-size: .5em;
-  padding: .5em 0;
+  padding: .5em 0 .6em;
   white-space: nowrap;
 }
 
@@ -312,7 +313,7 @@ footer div, footer a {
   }
 
   header h4, header br {
-    line-height: 24px;
+    line-height: 22px;
   }
 
   #date {
