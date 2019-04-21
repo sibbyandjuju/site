@@ -162,6 +162,7 @@ button:disabled {
 
 #prompt, #confirmation {
   display: inline-block;
+  line-height: 30px;
 }
 
 #confirmation {
