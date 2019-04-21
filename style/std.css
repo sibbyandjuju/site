@@ -122,6 +122,7 @@ input, textarea {
   margin-bottom: .5em;
   width: 100%;
   color: blue;
+  max-height: 9999999px;
 }
 
 input:required, textarea:required {
