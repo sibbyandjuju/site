@@ -255,6 +255,7 @@ footer {
   font-size: .5em;
   padding: .5em 0 .75em;
   white-space: nowrap;
+  overflow-x: hidden;
 }
 
 footer div {
